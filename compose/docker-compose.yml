@@ -1,11 +1,11 @@
   # docker-compose.yaml
-  version: '3.8'
-  services:
-    jenkins:
-      image: jenkinsci/blueocean:latest
-      ports:
-       - 8080:8080
+version: '3.8'
+services:
+  jenkins:
+    image: jenkinsci/blueocean:latest
+    ports:
+     - 8080:8080
       
-    container_name: myjenkins
-    volumes:
-      - /home/vagrant/jenkins:/var/jenkins_home
+  container_name: myjenkins
+  volumes:
+    - /home/vagrant/jenkins:/var/jenkins_home
