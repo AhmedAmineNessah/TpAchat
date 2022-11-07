@@ -6,6 +6,8 @@ services:
     restart: unless-stopped
     environment:
       MY_SQL_ROOT_PASSWORD: root
+      MySQL_USER: amine
+      MYSQL_PASSWORD: 123
     volumes:
       - /home/vagrant/datasql:/var/lib/mysql
   spring_app:
