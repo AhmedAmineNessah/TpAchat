@@ -11,7 +11,6 @@ pipeline {
         stage('Clone the repo') {
             steps {
                 echo 'clone the repo'
-                sh 'rm -r TpAchat'
                 sh 'git clone https://github.com/AhmedAmineNessah/TpAchat.git'
             }
         }
