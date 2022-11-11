@@ -39,6 +39,11 @@ pipeline {
                 sh "sudo docker compose up -d";
             }
         }
+        stage('Deployment') {
+            steps {
+                sh 'mvn deploy -Dmaven.test.skip=true'
+            }
+        }
         
     }
 }
