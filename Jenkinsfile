@@ -8,17 +8,16 @@ pipeline {
                 sh 'ls /home/vagrant'
             }
         }
-        stage('Clone the repo') {
+        stage ('GIT') {
             steps {
-                echo 'clone the repo'
-                sh 'rm -r TpAchat'
-                sh 'git clone https://github.com/AhmedAmineNessah/TpAchat.git'
+               echo "Getting Project from Git"; 
+                git branch: "main", 
+                    url: "https://github.com/AhmedAmineNessah/TpAchat.git";
             }
         }
                stage("Build") {
             steps {
                 sh "ls"
-                sh "cd TpAchatt"
                 sh "mvn clean package";
             }
         }
