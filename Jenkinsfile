@@ -18,6 +18,7 @@ pipeline {
                stage("Build") {
             steps {
                 sh "ls"
+                sh "cd TpAchatt"
                 sh "mvn clean package";
             }
         }
